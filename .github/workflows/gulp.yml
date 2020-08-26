@@ -25,3 +25,7 @@ jobs:
       - run: mkdir -p build
       - run: mkdir -p build/css
       - run: cp -R css/* build/css/
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
